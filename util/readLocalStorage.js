@@ -1,3 +1,3 @@
-export function readLocalStorage(key) {
+export default function readLocalStorage(key) {
     return JSON.parse(localStorage.getItem(key));
 }
