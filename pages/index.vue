@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import saveOnLocalStorage from '../util/dataLocalStorage'
+import saveOnLocalStorage from '../util/saveOnLocalStorage'
 export default {
   name: 'IndexPage',
   data() {
