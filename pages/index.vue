@@ -39,6 +39,7 @@ export default {
       articleSummary: 'This is the summary of the article V',
       linkArticle: 'read more V',
       listArticles: [],
+      listImages: [],
     }
   },
 
@@ -50,9 +51,16 @@ export default {
     fecthListPosts() {
       fetch('https://jsonplaceholder.typicode.com/posts')
         .then((response) => response.json())
-        .then((data) => {
-          this.listArticles = data
-        })
+        .then((data) => this.reduceListSize(data))
+    },
+
+    reduceListSize(list) {
+      const newList = list.splice(0, 10)
+      return newList
+    },
+
+    renderListPosts(list) {
+      this.listArticles = list
     },
   },
 }
