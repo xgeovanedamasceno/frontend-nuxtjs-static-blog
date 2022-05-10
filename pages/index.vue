@@ -19,7 +19,9 @@
     <article v-for="article in listArticles" :key="article.id" class="my-20">
       <h2 class="text-5xl font-semibold mb-5">{{ article.title }}</h2>
       <p class="mb-5">{{ article.body }}</p>
-      <p class="text-purple-500">{{ linkArticle }}</p>
+      <p class="text-purple-500">
+        <a :id="article.id" href="./blog-post/">{{ linkArticle }}</a>
+      </p>
     </article>
     <footer>
       <h3 class="text-1xl font-semibold text-black-600">
@@ -37,7 +39,7 @@ export default {
       pageTitle: 'Nuxt Static Blog',
       articleTitle: 'Article Title V',
       articleSummary: 'This is the summary of the article V',
-      linkArticle: 'read more V',
+      linkArticle: 'read more',
       listArticles: [],
       listImages: [],
     }
