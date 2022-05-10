@@ -10,9 +10,9 @@
       </ul>
     </nav>
     <section>Call to Action</section>
-    <article class="my-20">
-      <h2 class="text-5xl font-semibold mb-5">{{ articleTitle }}</h2>
-      <p class="mb-5">{{ articleSummary }}</p>
+    <article v-for="article in listArticles" :key="article.id" class="my-20">
+      <h2 class="text-5xl font-semibold mb-5">{{ article.title }}</h2>
+      <p class="mb-5">{{ article.body }}</p>
       <p class="text-purple-500">{{ linkArticle }}</p>
     </article>
     <footer>
@@ -32,7 +32,22 @@ export default {
       articleTitle: 'Article Title V',
       articleSummary: 'This is the summary of the article V',
       linkArticle: 'read more V',
+      listArticles: [],
     }
+  },
+
+  created() {
+    this.fecthListPosts()
+  },
+
+  methods: {
+    fecthListPosts() {
+      fetch('https://jsonplaceholder.typicode.com/posts')
+        .then((response) => response.json())
+        .then((data) => {
+          this.listArticles = data
+        })
+    },
   },
 }
 </script>

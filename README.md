@@ -1,3 +1,7 @@
+# Notes
+
+- https://eslint.vuejs.org/rules/require-v-for-key.html
+
 # frontend-nuxtjs-static-blog
 
 ## Build Setup
