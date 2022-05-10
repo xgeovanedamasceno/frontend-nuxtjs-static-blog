@@ -3,11 +3,8 @@
     <header class="mt-20 mb-5">
       <h1 class="text-3xl font-semibold text-purple-600">{{ pageTitle }}</h1>
     </header>
-    <nav>
-      <ul>
-        <li>About</li>
-        <li>Blog</li>
-      </ul>
+    <nav class="p-5">
+      <a href="#">Home</a>
     </nav>
     <section class="bg-gray-100 p-10">
       <p class="mb-5">
