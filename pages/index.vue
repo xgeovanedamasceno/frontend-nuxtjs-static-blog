@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import saveOnLocalStorage from '../util/dataLocalStorage'
 export default {
   name: 'IndexPage',
   data() {
@@ -67,6 +68,7 @@ export default {
 
     reduceListSize(list) {
       const newList = list.splice(0, 10)
+      saveOnLocalStorage(newList)
       return newList
     },
 
