@@ -17,6 +17,9 @@
       </form>
     </section>
     <article v-for="article in listArticles" :key="article.id" class="my-20">
+      <figure v-for="img in listImages" :key="img.id">
+        <img src="{img.url}" alt="{img.title}" />
+      </figure>
       <h2 class="text-5xl font-semibold mb-5">{{ article.title }}</h2>
       <p class="mb-5">{{ article.body }}</p>
       <p class="text-purple-500">{{ linkArticle }}</p>
@@ -45,6 +48,7 @@ export default {
 
   created() {
     this.fecthListPosts()
+    this.fetchListImages()
   },
 
   methods: {
@@ -54,6 +58,13 @@ export default {
         .then((data) => this.reduceListSize(data))
     },
 
+    fetchListImages() {
+      fetch('https://jsonplaceholder.typicode.com/photos')
+        .then((response) => response.json())
+        .then((json) => this.reduceListSize(json))
+        .then((list) => this.renderListImages(list))
+    },
+
     reduceListSize(list) {
       const newList = list.splice(0, 10)
       return newList
@@ -61,6 +72,10 @@ export default {
 
     renderListPosts(list) {
       this.listArticles = list
+    },
+
+    renderListImages(list) {
+      this.listImages = list
     },
   },
 }
