@@ -45,6 +45,7 @@ export default {
   gtm: {
     id: 'GTM-WV3ZVRN',
     enabled: true,
+    debug: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
