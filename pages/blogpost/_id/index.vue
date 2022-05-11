@@ -17,9 +17,8 @@
       </form>
     </section>
     <article class="my-20">
-      <h2 class="text-5xl font-semibold mb-5">article.title</h2>
-      <p class="mb-5">article.body</p>
-      <p class="text-purple-500">linkArticle</p>
+      <h2 class="text-5xl font-semibold mb-5">{{ articleTitle }}</h2>
+      <p class="mb-5">{{ articleBody }}</p>
     </article>
     <footer>
       <h3 class="text-1xl font-semibold text-black-600">
@@ -31,16 +30,37 @@
 
 <script>
 export default {
-  name: 'PostPage',
+  name: 'BlogPost',
   data() {
     return {
       pageTitle: 'Nuxt Static Blog',
-      articleTitle: 'Article Title V',
-      articleSummary: 'This is the summary of the article V',
-      linkArticle: 'read more V',
+      articleTitle: '',
+      articleBody: '',
       listArticles: [],
       listImages: [],
     }
+  },
+
+  created() {
+    this.fetchPost()
+  },
+
+  methods: {
+    fetchPost() {
+      const postId = this.getPostId()
+      fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+        .then((response) => response.json())
+        .then((json) => this.renderPost(json))
+    },
+
+    getPostId() {
+      return this.$route.params.id
+    },
+
+    renderPost(post) {
+      this.articleTitle = post.title
+      this.articleBody = post.body
+    },
   },
 }
 </script>
