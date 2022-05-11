@@ -1,6 +1,7 @@
 # Notes
 
 - https://eslint.vuejs.org/rules/require-v-for-key.html
+- https://stackoverflow.com/questions/53300006/dynamic-meta-for-nuxt-js
 
 # frontend-nuxtjs-static-blog
 
