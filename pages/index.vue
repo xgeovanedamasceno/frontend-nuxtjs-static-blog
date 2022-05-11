@@ -20,11 +20,9 @@
       <h2 class="text-5xl font-semibold mb-5">{{ article.title }}</h2>
       <p class="mb-5">{{ article.body }}</p>
       <p class="text-purple-500">
-        <NuxtLink :id="article.id" to="/blog-post/"
-          ><button :id="article.id" @click="showConsole">
-            {{ linkArticle }}
-          </button></NuxtLink
-        >
+        <NuxtLink :to="{ name: 'blogpost-id', params: { id: article.id } }">
+          {{ linkArticle }}
+        </NuxtLink>
       </p>
     </article>
     <footer>
@@ -82,10 +80,6 @@ export default {
 
     renderListImages(list) {
       this.listImages = list
-    },
-
-    showConsole(event) {
-      console.log(event)
     },
   },
 }
