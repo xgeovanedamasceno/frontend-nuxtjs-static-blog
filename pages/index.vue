@@ -17,6 +17,7 @@
       </form>
     </section>
     <article v-for="article in listArticles" :key="article.id" class="my-20">
+      <img :src="`https://picsum.photos/id/${article.id}/200`" alt="fd" />
       <h2 class="text-5xl font-semibold mb-5">{{ article.title }}</h2>
       <p class="mb-5">{{ article.body }}</p>
       <p class="text-purple-500">
