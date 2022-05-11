@@ -18,6 +18,7 @@
     </section>
     <article class="my-20">
       <h2 class="text-5xl font-semibold mb-5">{{ articleTitle }}</h2>
+      <img :src="`https://picsum.photos/id/${getPostId()}/600`" alt="fd" />
       <p class="mb-5">{{ articleBody }}</p>
     </article>
     <footer>
