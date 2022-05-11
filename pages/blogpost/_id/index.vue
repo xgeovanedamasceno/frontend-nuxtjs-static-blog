@@ -42,6 +42,19 @@ export default {
     }
   },
 
+  head() {
+    return {
+      title: this.articleTitle,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.articleBody,
+        },
+      ],
+    }
+  },
+
   created() {
     this.fetchPost()
   },
