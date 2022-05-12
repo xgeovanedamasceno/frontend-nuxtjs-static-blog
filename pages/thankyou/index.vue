@@ -1,15 +1,15 @@
 <template>
   <div class="w-1/2 mx-auto">
-    <header class="mt-20 mb-5">
+    <header class="mt-10 mb-5">
       <h1 class="text-3xl font-semibold text-purple-600">{{ pageTitle }}</h1>
     </header>
     <nav class="p-5">
-      <a href="#">Home</a>
+      <NuxtLink to="/">Home</NuxtLink>
     </nav>
-    <section class="my-20">
-      <h2 class="text-5xl font-semibold mb-5">{{ greetings }}</h2>
-      <p class="mb-5">{{ headline }}</p>
-    </section>
+    <main class="my-20 bg-green-500 p-20 h-1/2">
+      <h2 class="text-5xl text-white font-semibold mb-5">{{ greetings }}</h2>
+      <p class="mb-5 text-white">{{ headline }}</p>
+    </main>
     <footer>
       <h3 class="text-1xl font-semibold text-black-600">
         Nuxt Static Blog Developed By xgeovanedamasceno
@@ -24,9 +24,9 @@ export default {
   data() {
     return {
       pageTitle: 'Nuxt Static Blog',
-      greetings: 'Well Done!',
+      greetings: 'Thank you!',
       headline:
-        'Welcome! Now you are a premium member and will receive the best tips ever!',
+        'And welcome! You are now a premium member and will receive the best tips ever!',
     }
   },
 
