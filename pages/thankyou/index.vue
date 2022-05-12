@@ -10,7 +10,7 @@
       <h2 class="text-5xl text-white font-semibold mb-5">{{ greetings }}</h2>
       <p class="mb-5 text-white">{{ headline }}</p>
     </main>
-    <footer>
+    <footer class="pb-5">
       <h3 class="text-1xl font-semibold text-black-600">
         Nuxt Static Blog Developed By xgeovanedamasceno
       </h3>

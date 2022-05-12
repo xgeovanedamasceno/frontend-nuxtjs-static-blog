@@ -27,7 +27,7 @@
       />
       <p class="mb-5">{{ articleBody }}</p>
     </article>
-    <footer>
+    <footer class="pb-5">
       <h3 class="text-1xl font-semibold text-black-600">
         Nuxt Static Blog Developed By xgeovanedamasceno
       </h3>
