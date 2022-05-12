@@ -13,7 +13,9 @@
       </p>
       <form>
         <input class="p-2 w-300" placeholder="Enter your email to subscribe" />
-        <button class="p-2 bg-green-500 text-white">Subscribe</button>
+        <NuxtLink to="/subscribe/">
+          <button class="p-2 bg-green-500 text-white">Subscribe</button>
+        </NuxtLink>
       </form>
     </section>
     <article v-for="article in listArticles" :key="article.id" class="my-20">
