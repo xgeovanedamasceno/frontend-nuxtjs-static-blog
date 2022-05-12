@@ -4,16 +4,18 @@
       <h1 class="text-3xl font-semibold text-purple-600">{{ pageTitle }}</h1>
     </header>
     <nav class="p-5">
-      <a href="#">Home</a>
+      <NuxtLink to="/">Home</NuxtLink>
     </nav>
     <section class="bg-gray-100 p-10">
       <p class="mb-5">
         We are a team of developers with houndred hours spend on coding, we
         create professional apps,
       </p>
-      <form>
+      <form action="/thankyou/">
         <input class="p-2 w-300" placeholder="Enter your email to subscribe" />
-        <button class="p-2 bg-green-500 text-white">Subscribe</button>
+        <button class="p-2 bg-green-500 text-white" type="submit">
+          Subscribe
+        </button>
       </form>
     </section>
     <article class="my-20">
@@ -25,7 +27,7 @@
       />
       <p class="mb-5">{{ articleBody }}</p>
     </article>
-    <footer>
+    <footer class="pb-5">
       <h3 class="text-1xl font-semibold text-black-600">
         Nuxt Static Blog Developed By xgeovanedamasceno
       </h3>
