@@ -13,7 +13,7 @@
       </p>
       <form>
         <input class="p-2 w-300" placeholder="Enter your email to subscribe" />
-        <NuxtLink to="/subscribe/">
+        <NuxtLink to="/thankyou/">
           <button class="p-2 bg-green-500 text-white">Subscribe</button>
         </NuxtLink>
       </form>
