@@ -11,7 +11,7 @@
         We are a team of developers with houndred hours spend on coding, we
         create professional apps,
       </p>
-      <form action="/thankyou/" method="post">
+      <form action="/thankyou/">
         <input class="p-2 w-300" placeholder="Enter your email to subscribe" />
         <button class="p-2 bg-green-500 text-white" type="submit">
           Subscribe
