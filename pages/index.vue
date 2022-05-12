@@ -11,11 +11,11 @@
         We are a team of developers with houndred hours spend on coding, we
         create professional apps,
       </p>
-      <form>
+      <form action="./thankyou/" method="post">
         <input class="p-2 w-300" placeholder="Enter your email to subscribe" />
-        <NuxtLink to="/thankyou/">
-          <button class="p-2 bg-green-500 text-white">Subscribe</button>
-        </NuxtLink>
+        <button class="p-2 bg-green-500 text-white" type="submit">
+          Subscribe
+        </button>
       </form>
     </section>
     <article v-for="article in listArticles" :key="article.id" class="my-20">
