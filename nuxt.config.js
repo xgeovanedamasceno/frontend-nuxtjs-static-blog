@@ -43,7 +43,7 @@ export default {
     '@nuxtjs/gtm',
   ],
   gtm: {
-    id: 'GTM-P8MPZB6',
+    id: 'GTM-K8N7DL2',
     enabled: true,
     debug: true,
   },
