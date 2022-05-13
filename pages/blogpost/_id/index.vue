@@ -23,7 +23,9 @@
       </form>
     </section>
     <article class="my-20">
-      <h2 class="text-3xl text-center md:text-5xl font-semibold mb-5">
+      <h2
+        class="text-3xl text-center md:text-5xl md:text-left font-semibold mb-5"
+      >
         {{ articleTitle }}
       </h2>
       <img
