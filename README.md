@@ -1,38 +1,10 @@
-# Notes
+# A Nuxtjs Static Blog
 
-- https://eslint.vuejs.org/rules/require-v-for-key.html
-- https://stackoverflow.com/questions/53300006/dynamic-meta-for-nuxt-js
+This repository is a Nuxtjs Static Blog Application. The Post and images rendered are fetched from public APIs. Also this project is setted with GA4 and Google Tag Manager.
 
-### Google Analytics
+The style is provided by TailwindCSS lib.
 
-- https://www.rootandbranchgroup.com/google-analytics-4-vs-universal-analytics/
-
-Google Analytics 4 is now the official recommended property type of Google Analytics.
-Google Universal Analytics property will be deprecated i July 2023.
-GA4 can track both App and Web visits in a single property. GA4 allows measure data across plataforms and devices using multiple forms of identity.
-
-#### What is a Google Analytics Property?
-
-- "A property is where your company's online data goes to get processed by Google Analytics."
-
-#### How does Google Analytics 4 measure users?
-
-- Google UA (Universal Analytics) gets data from cookie-based tracking and the measurement
-  approach is a _session-based data model_. - That means that UA groups data into sessions, and these sessions are the foundation of all reporting. - What is a session? - A session is a group of user interactions. - During a session, UA collects and stores user interactions, such as pageviews,
-  events and eCommerce transactions. - A single section can contain multiple hits.
-- GA4 will still use cookies but instead of tracking sessions, GA4 has an _event-based-model._
-  - In GA4 properties, althoug is possible to see session data, Analytics collects and stores user interactions with your website or app as _events_.
-  - Events provides insight on what's happening, such as pageviews, button clicks, user actions, or system events.
-  - Events can collect and send pieces of information that more fully specify the action the user took or add further context to the event or user.
-  - Informations like:
-    - the value of purchase
-    - the title of the page a user visited
-    - the geographic location of the user
-  - **Everything in GA4 is an Event**
-
-from: https://www.rootandbranchgroup.com/google-analytics-4-vs-universal-analytics/
-
-# frontend-nuxtjs-static-blog
+You check it out at https://xgeovanedamasceno.github.io/frontend-nuxtjs-static-blog/
 
 ## Build Setup
 
@@ -100,3 +72,37 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+### Google Analytics
+
+- https://www.rootandbranchgroup.com/google-analytics-4-vs-universal-analytics/
+
+Google Analytics 4 is now the official recommended property type of Google Analytics.
+Google Universal Analytics property will be deprecated i July 2023.
+GA4 can track both App and Web visits in a single property. GA4 allows measure data across plataforms and devices using multiple forms of identity.
+
+#### What is a Google Analytics Property?
+
+- "A property is where your company's online data goes to get processed by Google Analytics."
+
+#### How does Google Analytics 4 measure users?
+
+- Google UA (Universal Analytics) gets data from cookie-based tracking and the measurement
+  approach is a _session-based data model_. - That means that UA groups data into sessions, and these sessions are the foundation of all reporting. - What is a session? - A session is a group of user interactions. - During a session, UA collects and stores user interactions, such as pageviews,
+  events and eCommerce transactions. - A single section can contain multiple hits.
+- GA4 will still use cookies but instead of tracking sessions, GA4 has an _event-based-model._
+  - In GA4 properties, althoug is possible to see session data, Analytics collects and stores user interactions with your website or app as _events_.
+  - Events provides insight on what's happening, such as pageviews, button clicks, user actions, or system events.
+  - Events can collect and send pieces of information that more fully specify the action the user took or add further context to the event or user.
+  - Informations like:
+    - the value of purchase
+    - the title of the page a user visited
+    - the geographic location of the user
+  - **Everything in GA4 is an Event**
+
+from: https://www.rootandbranchgroup.com/google-analytics-4-vs-universal-analytics/
+
+# Notes
+
+- https://eslint.vuejs.org/rules/require-v-for-key.html
+- https://stackoverflow.com/questions/53300006/dynamic-meta-for-nuxt-js
