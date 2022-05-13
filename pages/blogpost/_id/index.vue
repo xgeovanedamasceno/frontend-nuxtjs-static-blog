@@ -1,25 +1,31 @@
 <template>
-  <div class="w-1/2 mx-auto">
+  <div class="w-2/3 mx-auto">
     <header class="mt-20 mb-5">
-      <h1 class="text-3xl font-semibold text-purple-600">{{ pageTitle }}</h1>
+      <h1
+        class="text-center text-3xl font-semibold text-purple-600 md:text-left"
+      >
+        {{ pageTitle }}
+      </h1>
     </header>
-    <nav class="p-5">
+    <nav class="p-5 text-center md:text-left">
       <NuxtLink to="/">Home</NuxtLink>
     </nav>
     <section class="bg-gray-100 p-10">
       <p class="mb-5">
         We are a team of developers with houndred hours spend on coding, we
-        create professional apps,
+        create professional apps.
       </p>
-      <form action="/thankyou/">
+      <form action="/thankyou/" class="flex flex-col">
         <input class="p-2 w-300" placeholder="Enter your email to subscribe" />
-        <button class="p-2 bg-green-500 text-white" type="submit">
+        <button class="p-2 bg-green-500 text-white mt-5" type="submit">
           Subscribe
         </button>
       </form>
     </section>
     <article class="my-20">
-      <h2 class="text-5xl font-semibold mb-5">{{ articleTitle }}</h2>
+      <h2 class="text-3xl text-center md:text-5xl font-semibold mb-5">
+        {{ articleTitle }}
+      </h2>
       <img
         :src="`https://picsum.photos/id/${getPostId()}/500`"
         alt="fd"
